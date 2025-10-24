@@ -71,20 +71,21 @@ Ví dụ:
 
 * Xử lý **đăng ký** và **đăng nhập**.
 * Phát hành **JWT token** cho người dùng hợp lệ.
-* Token này được gửi kèm header `"Authorization: Bearer <token>"` trong các request tiếp theo.
-
+* Token này được gửi kèm header `"Authorization:Bearer <token>"` trong các request tiếp theo.
 ---
 
 ### 🛍️ **2. Product Service**
 
 * Quản lý dữ liệu sản phẩm (tên, giá, mô tả,…).
 * Mỗi khi thêm/sửa sản phẩm, service sẽ **phát sự kiện qua RabbitMQ** để các service khác cập nhật trạng thái.
+---
 
 ### 📦 **3. Order Service**
 
 * Tiếp nhận đơn hàng từ người dùng.
 * Kiểm tra tồn kho thông qua RabbitMQ.
 * Lưu đơn hàng vào MongoDB.
+---
 
 ### 🌐 **4. API Gateway**
 
@@ -184,7 +185,7 @@ Trả về JWT token → sử dụng cho các request khác.
 ![login](./assests/image-1.png)
 
 **Xem thông tin dashboard**
-![dashbroad](./assests/image-5.png)
+![dashbroad](./assests/image5.png)
 
 ---
 
